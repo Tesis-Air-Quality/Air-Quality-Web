@@ -1,0 +1,84 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(7, 57, 60);
+}
+.titulo_ariiba{
+
+    background-color: #f8f5f5;
+    text-align: center;
+}
+header {
+    background-color: rgb(16, 80, 83);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #ebe6e6;
+    color: #fff;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+main {
+    padding: 20px;
+}
+
+img {
+
+    height: 400PX;
+    width: auto;
+}
+
+footer {
+    background-color: #302d2d;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+.caja_imagenes_textos{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+
+.caja_img{
+
+background-color: rgb(7, 57, 60);
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 40PX;
+flex-direction: row;
+
+}
+
+.contenedor_texto_info{
+    background-color:rgb(7, 76, 80);
+    width: 600px;
+    height: 400px;
+    font-size: 15pt;
+    justify-content: center;
+}
+
+.image-container{
+    background-color: black;
+    
+}
+.contenedor_2{
+    background-color:rgb(7, 76, 80);
+    width: 600px;
+    height: 400px;
+    font-size: 15pt;
+    justify-content: center;
+
+}

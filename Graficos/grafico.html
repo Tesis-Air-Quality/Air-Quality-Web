@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/qs.css">
+	<link rel="stylesheet" href="../css/qs_movile.css">
+	<link rel="stylesheet" type="text/css" href="css/grafico.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<title>Colibrí</title>
+	<link rel="icon" href="../img/colibsinfondo.png">
+</head>
+<body class="tipo1">
+	<header class="black mayuscula">
+		<link rel="icon" href="img/colibsinfondo.png">
+   
+		<div class="logo t15 tipo1" onclick="redirigirAIndex()">
+        
+		<img src="../img/colibsinfondo.png" width="70px" height="70px">
+        Colibrí
+    </div>
+
+    <script>
+       
+        function redirigirAIndex() {
+            window.location.href = '../index.php';
+       }
+	</script>
+
+		<button id="abrir" class="menu_celu_abrir"><i class="fa-solid fa-bars"></i></button>
+
+		<div class="menu t15" id="menu">
+			<button class="menu_celu_cerrar" id="cerrar"><i class="fa-solid fa-x"></i></button>
+			<ul class="lista">
+				<li><a href="../index.php">Inicio</a></li>
+				<li><a href="../quienes_somos.html">¿Quiénes somos?</a></li>
+				<li><a href="#contac">Contactanos</a></li>
+			</ul>
+
+		</div>
+	</header>
+	<div class="estadistica">
+
+	<div class="text">
+    <h1>Estadísticas</h1>
+   
+    <h2>El siguiente gráfico presenta la cantidad de botellas recolectadas</h2>
+    </div>
+
+
+    <div class="op">
+    <label for="selectMes">Seleccione un mes:</label>
+    <select id="selectMes" onchange="cargarDatosYActualizarGrafico()">
+
+        <!-- <option value="01">Enero</option>
+        <option value="02">Febrero</option>
+        <option value="03">Marzo</option>
+        <option value="04">Abril</option> -->
+        <!-- <option value="09">Mayo</option>
+        <option value="06">Junio</option>
+        <option value="07">Julio</option> -->
+
+        <option value="08">Agosto</option>
+        <option value="09">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option value="11">Noviembre</option>
+        <!-- <option value="12">Diciembre</option> -->
+        
+    </select>
+    </div>
+
+
+    <div class="grafico">
+    	<canvas id="miGrafico" ></canvas>
+    </div>
+</div>
+    <script>
+        function cargarDatosYActualizarGrafico() {
+            const mesSeleccionado = document.getElementById('selectMes').value;
+
+            fetch(`conBD.php?mes=${mesSeleccionado}`)
+                .then(response => response.json())
+                .then(data => {
+                     const botellasPorDia = data.reduce((acc, dato) => {
+                        const fecha = dato.fecha;
+                        acc[fecha] = acc[fecha] ? acc[fecha] + 1 : 1;
+                        return acc;
+                    }, {});
+
+                    const fechas = Object.keys(botellasPorDia);
+                    const botellasRecogidas = Object.values(botellasPorDia);
+
+                    const ctx = document.getElementById('miGrafico').getContext('2d');
+                    if (window.graficoBotellas) {
+                        window.graficoBotellas.data.labels = fechas;
+                        window.graficoBotellas.data.datasets[0].data = botellasRecogidas;
+                        window.graficoBotellas.update();
+                    } else {
+                        window.graficoBotellas = new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: fechas,
+                                datasets: [
+                                    {
+                                        label: 'Botellas recolectadas por día',
+                                        data: botellasRecogidas,
+                                        backgroundColor: 'rgba(7, 57, 60, 0.800)',
+                                    },
+                                ],
+                            },
+                            options: {
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Cantidad de botellas',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Fechas',
+                                        },
+                                    },
+                                },
+                            },
+                        });
+                    }
+                });
+        }
+
+        // Llamar a la función cada minuto (60000 milisegundos)
+        setInterval(cargarDatosYActualizarGrafico, 1000);
+
+        // Cargar el gráfico por primera vez al cargar la página
+        cargarDatosYActualizarGrafico();
+    </script>
+
+
+
+</div>
+
+
+
+
+
+	<footer id="footer" style="margin-top: 65px;">
+		<div class="participantes">
+			<div class="white tipo1">
+				<h1 class="t45" id="participantes">Contribuyentes del proyecto</h1>
+				<ul class="t20">
+					<li>Coperativas RSU</li>
+					<li>ISFT instituto superior de formación técnica 234</li>
+					<li>Escuela Técnica N°3</li>
+					<li>Escuela Secundaria N°7</li>
+					<li>D'natalini</li>
+				</ul>
+				<div class="contacto">
+					<br><br>
+					<h3 class="t25" id="contac">Contactos</h3>
+					<p><a href="https://instagram.com/pro.colibri?igshid=MzRlODBiNWFlZA==" target="_blank"
+							class="tipo1 t15 white"><i class="fa-brands fa-instagram"></i> pro.colibri</a></p>
+					<p><a href="tel:+54 11-6967-2720" class="tipo1 t15 white"><i
+								class="fa-solid fa-phone tipo1 t15 white"></i> +54 11-6867-2720</a></p>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+	<script src="../javascript/QS.js"></script>
+</body>
+</html>

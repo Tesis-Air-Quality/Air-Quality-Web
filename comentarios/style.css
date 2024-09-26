@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Open+Sans:wght@300&family=Ubuntu:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+.tipo1{
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    min-height:100vh;
+    background-color: rgb(235, 237, 239);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding: 20px;
+}
+.card{
+    height:auto;
+    width:400px;
+    border-radius:10px;
+    background-color: rgb(7, 57, 60);
+    padding:20px;
+}
+.top-row{
+    color:rgb(235, 237, 239);
+}
+.top-row p{
+    padding-bottom:20px;
+}
+.card-details{
+    position:relative;
+    display:flex;
+    
+    padding-bottom:20px;
+}
+.card-details input{
+    height:50px;
+    width:100%;
+    font-size:18px;
+    caret-color:rgb(235, 237, 239);
+    background-color: rgb(12, 76, 80);
+    color:rgb(235, 237, 239);
+    padding:0px 20px;
+    padding-left:50px;
+    box-sizing:border-box;
+    border-radius:10px;
+    outline:none;
+    border:none;
+}
+.card-details i{
+    position:absolute;
+    left:10px;
+    top:16px;
+    color: rgb(235, 237, 239);
+    font-size:18px;
+}
+.card-details span{
+    position:absolute;
+    text-align: center;
+    width:25px;
+    height:25px;
+    background-color: rgb(235, 237, 239);
+    border-radius:50%;
+    color:rgb(235, 237, 239);
+    font-size:17px;
+    color:#000;
+    right:12px;
+    top:13px;
+    opacity:0.4;
+
+}
+
+.card-details span:hover{
+    opacity:1;
+}
+.forget{
+    color:rgb(235, 237, 239);
+    margin-bottom:13px;
+}
+.sign-in{
+   display:flex;
+   justify-content:center;
+   align-items:center;
+    height:60px;
+    width:100%;
+    font-size:15pt;
+    color: rgb(7, 57, 60);
+    border-radius:10px;
+    background-color: rgb(235, 237, 239);
+    font-weight:600;
+    cursor:pointer;
+    transition:all 0.5s;
+    border:none;
+}
+.sign-in:hover{
+    background-color:rgb(163, 164, 164);
+    
+}
+.sign-up{
+    margin-top:10px;
+    color: rgb(235, 237, 239);
+}
+.sign-up a{
+    color:rgb(235, 237, 239);;
+    text-decoration:none;
+    transition:all 0.5s;
+}
+.sign-up a:hover{
+    color:#f4d5a8;
+}
+
+.warning{
+    border:2px solid red !important;
+}
+.card .mensaje{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & h4{
+        color: red;
+    }
+    & h3{
+        color: rgb(235, 237, 239);
+    }
+    
+}

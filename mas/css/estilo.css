@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Open+Sans:wght@300&family=Ubuntu:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*----TIPOGRAFIA-----*/
+
+.tipo1{
+    font-family: 'Montserrat', sans-serif;
+}
+.tipo2{
+    font-family: 'Open Sans', sans-serif;
+}
+.tipo3{
+    font-family: 'Ubuntu', sans-serif;
+}
+.tipoNUM{
+    font-family: 'Press Start 2P', cursive;
+}
+.t10{
+    font-size: 10pt;
+}
+.t12{
+    font-size: 12pt;
+}
+.t15{
+    font-size: 15pt;
+}
+.t20{
+    font-size: 20pt;
+}
+.t25{
+    font-size: 25pt;
+}
+.t30{
+    font-size: 30pt;
+}
+.t40{
+    font-size: 40pt;
+}
+.t45{
+    font-size: 45pt;
+}
+.t60{
+    font-size: 60pt;
+}
+.t80{
+    font-size: 80pt;
+}
+.white{
+    color: rgb(252, 246, 246);
+}
+.black{
+    color: black;
+}
+.gray{
+    color: rgb(77, 77, 77);
+}
+.mayuscula{
+    text-transform: uppercase;
+}
+.centrar{
+    text-align: center;
+}
+.negrita{
+    font-weight: 100;
+}
+a{
+    text-decoration: none;
+}
+
+.reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.row{
+    flex-direction: row;
+}
+
+li{
+    list-style: none;/*elimina el punto de la lista*/
+    
+}
+
+/*fin tipografia*/
+/*Menu*/
+header{
+    background-color: rgb(255, 255, 255);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+    padding-left: 50px;
+    
+   
+}
+.logo{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.header .menu{
+    display: flex;
+    width: 70%;
+    height: 100%;
+    gap: 1rem;
+
+}
+.lista{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+.menu li a{
+    color: rgb(0, 0, 0);
+}
+.menu_celu_abrir, .menu_celu_cerrar{
+    display: none;
+}
+
+/*fin de menu*/
+
+/*Inicio de la pagina*/
+.inicio{
+    background-color: rgb(235, 237, 239);
+    width: 100%;
+    height: 600px;
+    padding: 50px;
+    
+}
+.inicio .todo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.inicio .todo .titulo{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.inicio .todo img{
+    width: 350px;
+    
+}
+/* fin Inicio de la pagina*/
+
+/*colibri*/
+.coli{
+    background-color: rgb(7, 57, 60);
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+}
+.coli .info_QueEs{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    
+}
+.coli .info_QueEs p{
+    width: 80%;
+    text-align: center;
+}
+.coli img{
+    width: 400px;
+}
+.coli .info_QueEs a{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: auto;
+        padding: 10px;
+       
+        color: aliceblue;
+        background-color: rgba(124, 141, 137, 0.671);
+        border-radius: 30px;
+        outline: none;
+        border: none;
+        transition: all .100s linear;
+        font-size: 10pt;
+    }
+
+
+
+/*fin colibri*/
+
+/*info del proyecto*/
+.info{
+    background-color: rgb(235, 237, 239);
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.card{
+    background-color: rgb(7, 57, 60);
+    width: 80%;
+    height: auto;
+    margin: 30px;
+
+    
+}
+/*.imagenINF{
+    width: 100%;
+    object-fit: cover;
+}*/
+.card .card_division{
+    width: 100%;
+    height: 500px;
+    display: flex;
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+    justify-content: center;   
+}
+.card .card_division .informacion_de_img{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.card_division h3{
+    font-size: 30pt;
+}
+.card_division p{
+    font-size: 25pt;
+    line-height: 1;
+}
+
+.card img{
+    width: 50%;
+    object-fit: cover;
+ 
+}
+
+/*fin*/
+
+/*objetivos*/
+.obj{
+    background-color: rgb(235, 237, 239);
+    width: 100%;
+    height: auto;
+}
+.obj h2{
+    text-align: center;
+    font-size: 40pt;
+}
+.obj .cuad{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.obj .cuad .inf{
+    width: 80%;
+    height: auto;
+    margin: 30px; 
+
+    
+}
+.obj .cuad .division{
+    width: 100%;
+    height: 350px;
+    display: flex;
+
+}
+.obj .cuad .division .informacion_obj{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3px; 
+
+}
+
+.obj .cuad .division h2{
+    background-color: rgb(7, 57, 60);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30pt;
+    
+}
+.obj .division .informacion_obj p{
+        font-size: 17pt;
+}
+
+.separador{
+    background-color: rgb(7, 57, 60);
+    width: 100%;
+    height: 60px;
+}
+/*fin*/
+
+
+/*CONTADOR DE BOTELLAS*/
+.contador{
+    background-color: rgb(235, 237, 239);/*rgb(255, 255, 255);*/
+    width: 100%;
+    height: 700px;
+}
+.contador .contenido_cont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.contador .contenido_cont h1{
+    font-size: 40pt;
+}
+.contador .contenido_cont .conta_num{
+    font-size: 30pt;
+    border: 3px solid black;
+    padding: 15px;
+}
+.contador .contenido_cont img{
+    width: 400px;
+}
+
+/*fin CONTADOR DE BOTELLAS*/
+
+
+
+/*nosotras*/
+.nosotras{
+    background-color: rgb(235, 237, 239);
+    width: 100%;
+    height: 600px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center
+  
+    
+}
+.nosotras .todo{
+    /* background-color: rgb(201, 86, 86); */
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.nosotras h2{ 
+    font-size: 30pt;
+}
+.linea{
+    width: 95%;
+    height: 3px;
+    background-color: black;
+   
+   
+} 
+
+
+.nosotras .todo .cudri_foto{
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   
+    
+}
+.nosotras .todo .cudri_foto img{
+     height: 100%;
+    width: 30%;
+    object-fit: cover;
+
+    
+}
+
+/*fin*/
+
+/*participantes*/
+.participantes{
+    background-color: rgb(7, 57, 60);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    list-style: none;
+
+}
+.participantes .part ul{
+    line-height: 23pt;
+    list-style: none;
+    
+}
+.participantes h1{
+    font-size: 45px;
+ }
+
+/*fin*/
+
+
+/*CONTENEDOR SCROLLBAR-- para que se vea mas lindo*/
+::-webkit-scrollbar {
+    height: 7px;
+    width: 8px;
+    border-radius: 5px;
+}
+
+/* FONDO BARRA SCROLL*/
+::-webkit-scrollbar-track {/*donde se desliza la barra*/ 
+    background: rgb(235, 237, 239);
+}
+
+/* SELECTOR */
+::-webkit-scrollbar-thumb {/*los dos puntos :: son ceudo clase*/
+    background: rgb(7, 57, 60);
+    ;
+    border-radius: 5px;
+}
+
+/* SELECTOR hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(14, 110, 116);
+    ;
+}
